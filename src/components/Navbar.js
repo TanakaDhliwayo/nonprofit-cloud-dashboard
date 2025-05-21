@@ -2,6 +2,11 @@ import React from "react";
 import Dashboard from "./Dashboard";
 
 const AppNavbar = () => {
+  const handleLogout = () => {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "/login";
+  };
+
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary bg-light"
@@ -46,6 +51,14 @@ const AppNavbar = () => {
               <a className="nav-link" href="/Settings">
                 Settings
               </a>
+            </li>
+            <li className="nav-item">
+              <button
+                className="btn btn-outline-danger "
+                onClick={handleLogout}
+              >
+                Log Out
+              </button>
             </li>
           </ul>
         </div>

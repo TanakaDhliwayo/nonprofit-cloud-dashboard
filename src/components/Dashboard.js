@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AnalyticsChart from "./AnalyticsChart";
 import StatsOverview from "../components/StatsOverview";
+import TanakaPic from "../media/Tanaka.jpg"; // adjust path based on file location
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
@@ -203,8 +204,9 @@ const Dashboard = () => {
               <div className="row g-0">
                 <div className="col-md-4">
                   <img
-                    src="src/media/Tanaka.jpg"
-                    className="img-fluid rounded-start"
+                    src={TanakaPic}
+                    alt="Tanaka Dhliwayo"
+                    className="img-fluid "
                   />
                 </div>
                 <div className="col-md-8">

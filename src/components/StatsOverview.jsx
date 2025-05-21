@@ -1,4 +1,5 @@
 import React from "react";
+//import Projects from "./Projects";
 
 const StatsOverview = ({ stats }) => {
   return (
