@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import AnalyticsChart from "./AnalyticsChart";
+import StatsOverview from "../components/StatsOverview";
 
 const Dashboard = () => {
+  const [stats, setStats] = useState({
+    projects: 12,
+    users: 45,
+    cloudSpend: 420.5,
+  });
+
+  const handleAddProject = (newProjectName) => {
+    setStats((prev) => ({
+      ...prev,
+      projects: prev.projects + 1,
+    }));
+  };
+
   return (
     <div>
       <div className="container my-4">
@@ -10,41 +24,7 @@ const Dashboard = () => {
         <div className="row mb-4">
           <div className="col-md-9">
             <div className="row mb-4">
-              <div className="col-md-3">
-                <div className="card text-white bg-primary mb-3">
-                  <div className="card-body">
-                    <h5 className="card-title">Total Projects</h5>
-                    <p className="card-text fs-4">12</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-3">
-                <div className="card text-white bg-success mb-3">
-                  <div className="card-body">
-                    <h5 className="card-title">Active Users</h5>
-                    <p className="card-text fs-4">58</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-3">
-                <div className="card text-white bg-warning mb-3">
-                  <div className="card-body">
-                    <h5 className="card-title">Cloud Spend</h5>
-                    <p className="card-text fs-4">$2,340</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-3">
-                <div className="card text-white bg-danger mb-3">
-                  <div className="card-body">
-                    <h5 className="card-title">AI Tools Enabled</h5>
-                    <p className="card-text fs-4">5</p>
-                  </div>
-                </div>
-              </div>
+              <StatsOverview stats={stats} />
             </div>{" "}
             <div className="row">
               {/* Card 1 */}
@@ -98,7 +78,7 @@ const Dashboard = () => {
                     alt="Cloud Services"
                   />
                   <div className="card-body">
-                    <h5 className="card-title">Azure Cloud Tools</h5>
+                    <h5 className="card-title">Azure Cloud Tools </h5>
                     <p className="card-text">
                       Manage Azure services and cloud resources for nonprofit
                       digital transformation initiatives.

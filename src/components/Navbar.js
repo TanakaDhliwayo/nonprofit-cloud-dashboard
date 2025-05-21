@@ -26,24 +26,22 @@ const AppNavbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/dashboard"
-              >
+              <a class="nav-link" href="/">
                 Dashboard
               </a>
             </li>
+            <li className="nav-item">
+              <a class="nav-link" href="/projects">
+                Projects
+              </a>
+            </li>
+
             <li className="nav-item">
               <a className="nav-link" href="/Integrations">
                 Itergrations
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/Reports">
-                Reports
-              </a>
-            </li>
+
             <li className="nav-item">
               <a className="nav-link" href="/Settings">
                 Settings
