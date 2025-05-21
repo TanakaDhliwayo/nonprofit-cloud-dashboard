@@ -3,7 +3,10 @@ import Dashboard from "./Dashboard";
 
 const AppNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light">
+    <nav
+      className="navbar navbar-expand-lg bg-body-tertiary bg-light"
+      style={{ position: "sticky", top: 0, zIndex: 1000 }}
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           🌍 Nonprofit Dashboard
