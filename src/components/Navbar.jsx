@@ -1,9 +1,12 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const AppNavbar = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     localStorage.removeItem("loggedIn");
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (
@@ -12,14 +15,9 @@ const AppNavbar = () => {
       style={{ position: "sticky", top: 0, zIndex: 1000 }}
     >
       <div className="container-fluid">
-        <a
-          className="navbar-brand"
-          href="/Dashboard"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="navbar-brand" to="/">
           🌍 Nonprofit Dashboard
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -35,52 +33,30 @@ const AppNavbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link className="nav-link" to="/">
                 Dashboard
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/projects"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link className="nav-link" to="/projects">
                 Projects
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/Integrations"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link className="nav-link" to="/integrations">
                 Integrations
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/Settings"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link className="nav-link" to="/settings">
                 Settings
-              </a>
+              </Link>
             </li>
+
             <li className="nav-item">
-              <button
-                className="btn btn-outline-danger "
-                onClick={handleLogout}
-              >
+              <button className="btn btn-outline-danger" onClick={handleLogout}>
                 Log Out
               </button>
             </li>
