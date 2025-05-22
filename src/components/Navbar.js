@@ -1,5 +1,4 @@
 import React from "react";
-import Dashboard from "./Dashboard";
 
 const AppNavbar = () => {
   const handleLogout = () => {
@@ -13,7 +12,7 @@ const AppNavbar = () => {
       style={{ position: "sticky", top: 0, zIndex: 1000 }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/Dashboard">
           🌍 Nonprofit Dashboard
         </a>
         <button
@@ -31,19 +30,19 @@ const AppNavbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a class="nav-link" href="/">
+              <a className="nav-link" href="/">
                 Dashboard
               </a>
             </li>
             <li className="nav-item">
-              <a class="nav-link" href="/projects">
+              <a className="nav-link" href="/projects">
                 Projects
               </a>
             </li>
 
             <li className="nav-item">
               <a className="nav-link" href="/Integrations">
-                Itergrations
+                Integrations
               </a>
             </li>
 

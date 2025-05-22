@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import AnalyticsChart from "./AnalyticsChart";
 import StatsOverview from "../components/StatsOverview";
-import TanakaPic from "../media/Tanaka.jpg"; // adjust path based on file location
+import TanakaPic from "../media/Tanaka.jpg";
+import TanieCodes from "../media/TanieCodes.png";
+import AIIntegration from "../media/aiTools.png";
+import FlowgearIntegrations from "../media/Flowgear.png";
+import AzureCloudTools from "../media/azuretool.png";
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
@@ -32,9 +36,9 @@ const Dashboard = () => {
               <div className="col-md-4 mb-4">
                 <div className="card" style={{ width: "18rem" }}>
                   <img
-                    src="https://via.placeholder.com/286x180"
+                    src={AIIntegration}
                     className="card-img-top"
-                    alt="AI Tool"
+                    alt="AI Integration"
                   />
                   <div className="card-body">
                     <h5 className="card-title">AI Integration</h5>
@@ -42,7 +46,7 @@ const Dashboard = () => {
                       Explore AI tools like Microsoft Copilot to boost
                       productivity and automate workflows.
                     </p>
-                    <a href="#" className="btn btn-primary">
+                    <a href="/Integrations" className="btn btn-primary">
                       View Tool
                     </a>
                   </div>
@@ -53,7 +57,7 @@ const Dashboard = () => {
               <div className="col-md-4 mb-4">
                 <div className="card" style={{ width: "18rem" }}>
                   <img
-                    src="https://via.placeholder.com/286x180"
+                    src={FlowgearIntegrations}
                     className="card-img-top"
                     alt="Flowgear"
                   />
@@ -63,7 +67,7 @@ const Dashboard = () => {
                       Connect and automate systems with Flowgear workflows and
                       API logic—no-code/low-code power.
                     </p>
-                    <a href="#" className="btn btn-primary">
+                    <a href="/Integrations" className="btn btn-primary">
                       Explore Flowgear
                     </a>
                   </div>
@@ -74,7 +78,7 @@ const Dashboard = () => {
               <div className="col-md-4 mb-4">
                 <div className="card" style={{ width: "18rem" }}>
                   <img
-                    src="https://via.placeholder.com/286x180"
+                    src={AzureCloudTools}
                     className="card-img-top"
                     alt="Cloud Services"
                   />
@@ -84,7 +88,7 @@ const Dashboard = () => {
                       Manage Azure services and cloud resources for nonprofit
                       digital transformation initiatives.
                     </p>
-                    <a href="#" className="btn btn-primary">
+                    <a href="/Integrations" className="btn btn-primary">
                       Manage Cloud
                     </a>
                   </div>
@@ -114,7 +118,7 @@ const Dashboard = () => {
                       <td>HTML, CSS, JS</td>
                       <td>April 2025</td>
                       <td>
-                        <a href="#" className="btn btn-sm btn-primary">
+                        <a href="/projects" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -129,7 +133,7 @@ const Dashboard = () => {
                       <td>Arduino, Scratch</td>
                       <td>June 2025</td>
                       <td>
-                        <a href="#" className="btn btn-sm btn-primary">
+                        <a href="/projects" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -142,7 +146,7 @@ const Dashboard = () => {
                       <td>Microsoft 365, Zoom</td>
                       <td>Feb 2025</td>
                       <td>
-                        <a href="#" className="btn btn-sm btn-primary">
+                        <a href="/projects" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -172,9 +176,9 @@ const Dashboard = () => {
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src="https://via.placeholder.com/150" // Replace with actual profile/org image
-                      className="img-fluid rounded-start"
+                      src={TanieCodes}
                       alt="Tanie Codes Org"
+                      className="img-fluid "
                     />
                   </div>
                   <div className="col-md-8">
@@ -189,7 +193,10 @@ const Dashboard = () => {
                           Lead: Tanaka Dhliwayo
                         </small>
                       </p>
-                      <a href="#" className="btn btn-outline-primary btn-sm">
+                      <a
+                        href="/Settings"
+                        className="btn btn-outline-primary btn-sm"
+                      >
                         Settings
                       </a>
                     </div>
@@ -207,7 +214,19 @@ const Dashboard = () => {
                     src={TanakaPic}
                     alt="Tanaka Dhliwayo"
                     className="img-fluid "
+                    style={{
+                      borderRadius: "50%",
+                      width: "100px",
+                      height: "100px",
+                    }}
                   />
+                  <a
+                    href="#"
+                    className="btn btn-outline-primary btn-lg"
+                    style={{ marginTop: "10px" }}
+                  >
+                    Settings
+                  </a>
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
@@ -223,9 +242,6 @@ const Dashboard = () => {
                       <br />
                       <small className="text-muted">Location: Soweto, SA</small>
                     </p>
-                    <a href="#" className="btn btn-outline-primary btn-sm">
-                      Settings
-                    </a>
                   </div>
                 </div>
               </div>

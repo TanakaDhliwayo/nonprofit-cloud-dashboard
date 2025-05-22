@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import FlowgearAutomation from "../media/Flowgear.png";
+import AzureCloud from "../media/Azure.png";
+import MicrosoftCopilots from "../media/copilot.png";
 
 const Integrations = () => {
   const [copilotConnected, setCopilotConnected] = useState(false);
@@ -19,7 +22,7 @@ const Integrations = () => {
         <div className="col-md-4 mb-4">
           <div className="card shadow">
             <img
-              src="https://via.placeholder.com/286x180"
+              src={MicrosoftCopilots}
               className="card-img-top"
               alt="Copilot"
             />
@@ -47,7 +50,7 @@ const Integrations = () => {
         <div className="col-md-4 mb-4">
           <div className="card shadow">
             <img
-              src="https://via.placeholder.com/286x180"
+              src={FlowgearAutomation}
               className="card-img-top"
               alt="Flowgear"
             />
@@ -73,11 +76,7 @@ const Integrations = () => {
         {/* Azure */}
         <div className="col-md-4 mb-4">
           <div className="card shadow">
-            <img
-              src="https://via.placeholder.com/286x180"
-              className="card-img-top"
-              alt="Azure"
-            />
+            <img src={AzureCloud} className="card-img-top" alt="Azure" />
             <div className="card-body">
               <h5 className="card-title">
                 Azure Cloud {renderStatus(azureConnected)}

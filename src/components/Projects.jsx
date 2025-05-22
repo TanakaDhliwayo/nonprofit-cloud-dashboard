@@ -108,9 +108,8 @@ const Projects = () => {
                   className="btn btn-sm btn-danger"
                   onClick={() => handleDelete(i)}
                 >
-                  Delete
+                  Delete <i className="bi bi-trash"></i>
                 </button>
-                {/* You can add an Edit button here later */}
               </td>
             </tr>
           ))}
