@@ -14,12 +14,12 @@ const Dashboard = () => {
     cloudSpend: 420.5,
   });
 
-  const handleAddProject = (newProjectName) => {
-    setStats((prev) => ({
-      ...prev,
-      projects: prev.projects + 1,
-    }));
-  };
+  // const handleAddProject = (newProjectName) => {
+  //  setStats((prev) => ({
+  //   ...prev,
+  //  projects: prev.projects + 1,
+  //    }));
+  // };
 
   return (
     <div>
@@ -46,7 +46,12 @@ const Dashboard = () => {
                       Explore AI tools like Microsoft Copilot to boost
                       productivity and automate workflows.
                     </p>
-                    <a href="/Integrations" className="btn btn-primary">
+                    <a
+                      href="/Integrations"
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       View Tool
                     </a>
                   </div>
@@ -67,7 +72,12 @@ const Dashboard = () => {
                       Connect and automate systems with Flowgear workflows and
                       API logic—no-code/low-code power.
                     </p>
-                    <a href="/Integrations" className="btn btn-primary">
+                    <a
+                      href="/Integrations"
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Explore Flowgear
                     </a>
                   </div>
@@ -88,7 +98,12 @@ const Dashboard = () => {
                       Manage Azure services and cloud resources for nonprofit
                       digital transformation initiatives.
                     </p>
-                    <a href="/Integrations" className="btn btn-primary">
+                    <a
+                      href="/Integrations"
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Manage Cloud
                     </a>
                   </div>
@@ -118,7 +133,12 @@ const Dashboard = () => {
                       <td>HTML, CSS, JS</td>
                       <td>April 2025</td>
                       <td>
-                        <a href="/projects" className="btn btn-sm btn-primary">
+                        <a
+                          href="/projects"
+                          className="btn btn-sm btn-primary"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           View
                         </a>
                       </td>
@@ -133,7 +153,12 @@ const Dashboard = () => {
                       <td>Arduino, Scratch</td>
                       <td>June 2025</td>
                       <td>
-                        <a href="/projects" className="btn btn-sm btn-primary">
+                        <a
+                          href="/projects"
+                          className="btn btn-sm btn-primary"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           View
                         </a>
                       </td>
@@ -146,7 +171,12 @@ const Dashboard = () => {
                       <td>Microsoft 365, Zoom</td>
                       <td>Feb 2025</td>
                       <td>
-                        <a href="/projects" className="btn btn-sm btn-primary">
+                        <a
+                          href="/projects"
+                          className="btn btn-sm btn-primary"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           View
                         </a>
                       </td>
@@ -221,7 +251,9 @@ const Dashboard = () => {
                     }}
                   />
                   <a
-                    href="#"
+                    href="/Settings"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-outline-primary btn-lg"
                     style={{ marginTop: "10px" }}
                   >
@@ -294,6 +326,7 @@ const Dashboard = () => {
               href="https://github.com/TanakaDhliwayo"
               className="ms-2 me-2"
               target="_blank"
+              rel="noopener noreferrer"
             >
               GitHub
             </a>{" "}
@@ -301,6 +334,7 @@ const Dashboard = () => {
             <a
               href="https://www.linkedin.com/in/tanaka-dhliwayo-706599222/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               LinkedIn
             </a>
