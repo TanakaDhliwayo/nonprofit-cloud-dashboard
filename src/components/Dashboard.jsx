@@ -8,6 +8,7 @@ import FlowgearIntegrations from "../media/Flowgear.png";
 import AzureCloudTools from "../media/azuretool.png";
 
 const Dashboard = () => {
+  // eslint-disable-next-line no-unused-vars
   const [stats, setStats] = useState({
     projects: 12,
     users: 45,
